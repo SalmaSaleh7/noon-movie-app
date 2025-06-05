@@ -52,7 +52,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
         className={styles.favoriteButton}
         aria-label={isFavorite(movie.id) ? 'Remove from favorites' : 'Add to favorites'}
       >
-        {isFavorite(movie.id) ? '❤️ Remove' : '🤍 Favorite'}
+        {isFavorite(movie.id) ? ' Remove' : ' Favorite'}
       </button>
     </div>
   );

@@ -1,5 +1,8 @@
 import { Movie } from '../store/Movie';
 import MovieCard from './MovieCard';
+import LoadingSpinner from './LoadingSpinner';
+import ErrorMessage from './ErrorMessage';
+import EmptyState from './EmptyState';
 
 interface MovieListProps {
   movies: Movie[] | null;
@@ -8,17 +11,9 @@ interface MovieListProps {
 }
 
 export default function MovieList({ movies, isLoading, error }: MovieListProps) {
-  if (isLoading) {
-    return <div className="loading-spinner">Loading...</div>;
-  }
-
-  if (error) {
-    return <div className="error-message">Error: {error.message}</div>;
-  }
-
-  if (!movies || movies.length === 0) {
-    return <p className="no-results">No movies found.</p>;
-  }
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <ErrorMessage message={`Error: ${error.message}`} onRetry={() => window.location.reload()} />;
+  if (!movies?.length) return <EmptyState title="No movies found" message="Try a different search" />;
 
   return (
     <div className="movie-grid">

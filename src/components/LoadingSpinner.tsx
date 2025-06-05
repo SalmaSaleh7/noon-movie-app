@@ -1,20 +1,19 @@
 import styles from '../styles/LoadingSpinner.module.css';
 
+type Size = 'small' | 'medium' | 'large';
+
 interface LoadingSpinnerProps {
-  size?: 'small' | 'medium' | 'large';
+  size?: Size;
   color?: string;
 }
 
-export default function LoadingSpinner({ 
-  size = 'medium', 
-  color = '#ff4757' 
-}: LoadingSpinnerProps) {
-  const sizeClasses = {
-    small: styles.small,
-    medium: styles.medium,
-    large: styles.large,
-  };
+const sizeClasses: Record<Size, string> = {
+  small: styles.small,
+  medium: styles.medium,
+  large: styles.large
+};
 
+export default function LoadingSpinner({ size = 'medium', color = '#ff4757' }: LoadingSpinnerProps) {
   return (
     <div className={styles.spinnerContainer} aria-live="polite" aria-busy="true">
       <div 

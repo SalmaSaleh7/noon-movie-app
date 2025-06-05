@@ -1,0 +1,12 @@
+/* Reuses all home page styles */
+.favoritesPage {
+  color-scheme: homePage from './Home.module.css';
+}
+
+.favoritesContent {
+  color-scheme: searchContent from './Home.module.css';
+}
+
+.favoritesGrid {
+  color-scheme: randomMovies from './Home.module.css';
+}

@@ -1,61 +1,9 @@
-.movieGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.5rem;
-  padding: 1.5rem;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.loadingState {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
-  font-size: 1.2rem;
-  color: #666;
-}
-
-.emptyState {
-  text-align: center;
-  padding: 2rem;
-  color: #666;
-}
-
-.emptyStateIcon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #ccc;
-}
-
-.errorState {
-  text-align: center;
-  padding: 2rem;
-  color: #ff4757;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .movieGrid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.25rem;
-    padding: 1.25rem;
-  }
+.movieList {
+  padding: 2rem 0;
 }
 
 @media (max-width: 768px) {
-  .movieGrid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .movieGrid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem 0.5rem;
+  .movieList {
+    padding: 1rem 0;
   }
 }
