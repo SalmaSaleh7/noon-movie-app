@@ -73,7 +73,7 @@ export default function Home() {
   }, [fetchRandomMovies]);
 
   return (
-    <div className={styles.homePage}>
+    <div className={styles.moviehomePage}>
       <Header />
       <main className={styles.searchContent}>
         <div className={styles.searchContainer}>

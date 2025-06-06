@@ -1,7 +1,8 @@
-.homePage {
+.moviehomePage {
   min-height: 100vh;
   background-color: #0f0f1a;
   color: #ffffff;
+  width: 100%;      /* Full viewport width */
 }
 
 .searchContent {
@@ -72,7 +73,12 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
-
+.favoritesGrid {
+  display: grid;
+  grid-row:auto;
+  gap: 10.5rem;
+  padding: 2rem 0;
+}
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }

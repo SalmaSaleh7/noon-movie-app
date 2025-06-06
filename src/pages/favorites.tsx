@@ -2,17 +2,21 @@ import { useFavoritesStore } from '../store/favoritesStore';
 import MovieList from '../components/MovieList';
 import Header from '../components/Header';
 import EmptyState from '../components/EmptyState';
+import styles from '../styles/Home.module.css';
 
 export default function Favorites() {
   const { favorites } = useFavoritesStore();
 
   return (
-    <div className="favorites-page">
+    <div className={styles.moviehomePage}>
       <Header />
-      <main className="favorites-content">
-        <h1 className="page-title">Your Favorites</h1>
+      <main className={styles.searchContent}>
+        <h1 className={styles.sectionTitle}>Your Favorites</h1>
         {favorites.length > 0 ? (
-          <MovieList movies={favorites} />
+          // Use the grid class here to display cards side-by-side
+          <div className={styles.favoritesGrid}>
+            <MovieList movies={favorites} />
+          </div>
         ) : (
           <EmptyState 
             title="No favorites yet"
