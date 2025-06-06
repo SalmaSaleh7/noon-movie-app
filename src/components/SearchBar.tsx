@@ -4,15 +4,19 @@ import { ChangeEvent } from 'react';
 interface SearchBarProps {
   value: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   isLoading?: boolean;
   placeholder?: string;
+  disabled?: boolean;
 }
 
 export default function SearchBar({
   value,
   onChange,
+  onKeyDown,
   isLoading = false,
-  placeholder = 'Search movies...'
+  placeholder = 'Search movies...',
+  disabled = false
 }: SearchBarProps) {
   return (
     <div className={styles.searchContainer}>
@@ -20,9 +24,11 @@ export default function SearchBar({
         type="text"
         value={value}
         onChange={onChange}
+        onKeyDown={onKeyDown}
         placeholder={placeholder}
         className={styles.searchInput}
         aria-label="Search movies"
+        disabled={disabled || isLoading}
       />
       {isLoading && (
         <div className={styles.spinner} aria-hidden="true">

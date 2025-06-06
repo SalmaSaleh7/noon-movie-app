@@ -1,38 +1,38 @@
 .errorContainer {
-  max-width: 600px; 
-  margin: 2rem auto; 
-  padding: 1.5rem; 
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
   border-radius: 8px;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
-.errorContent { 
-  display: flex; 
-  align-items: flex-start; 
+.errorContent {
+  display: flex;
+  align-items: flex-start;
   gap: 1rem; }
-.errorIcon { 
-  width: 24px; 
-  height: 24px; 
+.errorIcon {
+  width: 24px;
+  height: 24px;
   flex-shrink: 0; }
 .errorMessage { line-height: 1.5; }
-.error { 
-  background: #fee2e2; 
-  color: #b91c1c; 
+.error {
+  background: #fee2e2;
+  color: #b91c1c;
   border: 1px solid #fca5a5; }
-.warning { 
-  background: #fef3c7; 
-  color: #92400e; 
+.warning {
+  background: #fef3c7;
+  color: #92400e;
   border: 1px solid #fcd34d; }
-.info { 
-  background: #dbeafe; 
-  color: #1e40af; 
+.info {
+  background: #dbeafe;
+  color: #1e40af;
   border: 1px solid #93c5fd; }
 .retryButton {
-  align-self: center; 
-  padding: 0.5rem 1rem; 
+  align-self: center;
+  padding: 0.5rem 1rem;
   background: #fff;
-  border: 1px solid currentColor; 
+  border: 1px solid currentColor;
   border-radius: 4px; color: inherit;
   cursor: pointer; transition: 0.2s ease;
 }

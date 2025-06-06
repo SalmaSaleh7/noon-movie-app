@@ -16,7 +16,7 @@ const sizeClasses: Record<Size, string> = {
 export default function LoadingSpinner({ size = 'medium', color = '#ff4757' }: LoadingSpinnerProps) {
   return (
     <div className={styles.spinnerContainer} aria-live="polite" aria-busy="true">
-      <div 
+      <div
         className={`${styles.spinner} ${sizeClasses[size]}`}
         style={{ borderTopColor: color }}
       />

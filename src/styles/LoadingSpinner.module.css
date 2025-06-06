@@ -1,36 +1,36 @@
 .spinnerContainer {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   align-items: center;
-  min-height: 200px; 
+  min-height: 200px;
   width: 100%;
 }
 .spinner {
-  border: 4px solid rgba(0,0,0,0.1); 
+  border: 4px solid rgba(0,0,0,0.1);
   border-radius: 50%;
-  border-top-color: currentColor; 
+  border-top-color: currentColor;
   animation: spin 1s ease-in-out infinite;
 }
-.small { 
-  width: 24px; 
-  height: 24px; 
+.small {
+  width: 24px;
+  height: 24px;
   border-width: 3px; }
-.medium { 
-  width: 40px; 
+.medium {
+  width: 40px;
   height: 40px; }
-.large { 
-  width: 60px; 
-  height: 60px; 
+.large {
+  width: 60px;
+  height: 60px;
   border-width: 6px; }
 .srOnly {
-  position: absolute; 
-  width: 1px; 
-  height: 1px; 
-  padding: 0; 
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
   margin: -1px;
-  overflow: hidden; 
-  clip: rect(0,0,0,0); 
-  white-space: nowrap; 
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
   border: 0;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
